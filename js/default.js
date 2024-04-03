@@ -1,2 +1,2 @@
-$(".header").load("header.html");
-$(".footer").load("footer.html");
+$.get("header.html", data => $("body").prepend(data));
+$.get("footer.html", data => $("body").append(data));
