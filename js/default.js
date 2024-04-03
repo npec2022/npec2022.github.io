@@ -1,2 +1,2 @@
-$.get("header.html .header", data => $("body").prepend(data));
-$.get("footer.html .footer", data => $("body").append(data));
+$.ajax({ url: "header.html", datatype: "html", success: html => $("body").prepend($(html).find(".header")) });
+$.ajax({ url: "footer.html", datatype: "html", success: html => $("body").append($(html).find(".footer")) });
